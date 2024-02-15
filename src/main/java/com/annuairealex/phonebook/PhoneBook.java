@@ -14,14 +14,12 @@ public class PhoneBook {
 
 		sc = new Scanner(System.in);
 
-		String userLastName = getUserInput("write lastname");
-		String userFirstName = getUserInput("write firstname");
-		String userPhoneNumber = getUserInput("write phone");
+		String userLastName = getUserInput("Give me your last name");
+		String userFirstName = getUserInput("Give me your first name");
+		String userPhoneNumber = getUserInput("Give me your phone number");
 
 		Contact newContact = new Contact(userFirstName, userLastName,
 				userPhoneNumber);
-
-		System.out.println(newContact.toString());
 
 		File phoneBookFile = getOrCreatePhoneBookFile(
 				URL_BOOK_FILE_PATH);
@@ -51,7 +49,7 @@ public class PhoneBook {
 
 		try {
 			phoneBookFile.createNewFile();
-			System.out.println("fichier créé " + phoneBookFile);
+			System.out.println("File is created " + phoneBookFile);
 			return phoneBookFile;
 		} catch (IOException e) {
 

@@ -40,7 +40,8 @@ public class Contact {
 
 	@Override
 	public String toString() {
-		return this.lastName + " " + this.firstName + " " + this.phoneNumber;
+		return "Your last name : " + this.lastName + " " + "Your first name : " + this.firstName + " "
+				+ "Your phone number : " + this.phoneNumber;
 	}
 
 }
